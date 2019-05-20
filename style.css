@@ -5,8 +5,8 @@
 }
 
 html {
-    background-color: #333;
-    color: #fff;
+    background-color: #fafafa;
+    color: #333;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -22,8 +22,34 @@ header h1 {
 }
 
 main.carousel-container {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    width: 800px;
+    height: 600px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .6);
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button img {
+    width: 35px;
+    fill: purple;
+}
+
+button.previous {
+    left: -7%;
+}
+
+button.next {
+    right: -7%;
 }
 
 .slider {
@@ -41,6 +67,14 @@ main.carousel-container {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    display: none;
+}
+
+.slide.active {
+    opacity: 1;
+    display: block;
 }
 
 .slide:nth-child(1) {

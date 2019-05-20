@@ -1,0 +1,75 @@
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    letter-spacing: 0.25rem;
+}
+
+main.carousel-container {
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    width: 800px;
+    height: 600px;
+    overflow-x: hidden;
+    list-style-type: none;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slide:nth-child(1) {
+    background-image: url(images/mountain-lake.jpg);
+}
+
+.slide:nth-child(2) {
+    background-image: url(images/hiking.jpg);
+}
+
+.slide:nth-child(3) {
+    background-image: url(images/desert.jpg);
+}
+
+.slide:nth-child(4) {
+    background-image: url(images/cliff.jpg);
+}
+
+.slide:nth-child(5) {
+    background-image: url(images/beach.jpg);
+}
+
+@media screen and (max-width: 850px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .slider {
+        width: 350px;
+        height: 250px;
+    }
+}

@@ -41,7 +41,6 @@ button {
 
 button img {
     width: 35px;
-    fill: purple;
 }
 
 button.previous {
@@ -67,14 +66,22 @@ button.next {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: opacity 300ms ease-in;
     display: none;
 }
 
 .slide.active {
-    opacity: 1;
     display: block;
+    animation: fadeIn 310ms ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .slide:nth-child(1) {
@@ -95,15 +102,4 @@ button.next {
 
 .slide:nth-child(5) {
     background-image: url(images/beach.jpg);
-}
-
-@media screen and (max-width: 850px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    .slider {
-        width: 350px;
-        height: 250px;
-    }
 }

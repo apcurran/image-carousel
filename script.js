@@ -5,14 +5,20 @@ const carousel = (() => {
     const slides = container.querySelectorAll(".slider li");
     let currentIndex = 0;
 
+    function resetAll() {
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+    }
+
     function slideRight() {
-        slides[currentIndex].classList.remove("active"); // Remove previous slide's active state.
+        resetAll();
         slides[currentIndex + 1].classList.add("active"); // Add the active state to current slide.
         currentIndex++;
     }
 
     function slideLeft() {
-        slides[currentIndex].classList.remove("active");
+        resetAll();
         slides[currentIndex - 1].classList.add("active");
         currentIndex--;
     }

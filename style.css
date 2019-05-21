@@ -37,6 +37,11 @@ button {
     border: none;
     cursor: pointer;
     z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
 }
 
 button img {
